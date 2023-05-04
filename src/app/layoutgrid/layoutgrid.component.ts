@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 export interface Transaction {
   type: string;
   amount: number;
-  date: Date;
+  memo: string;
 }
 
 @Component({
@@ -17,4 +17,18 @@ export class LayoutgridComponent {
   transactions: Transaction[] = [
 
   ]
+
+  addTransaction(newTransaction: Transaction) {
+    console.log(newTransaction);
+    if (newTransaction.type == "deposit") {
+      console.log("deposit")
+      this.accountBalance += newTransaction.amount
+    }
+    else {
+      console.log("withdraw")
+      this.accountBalance -= newTransaction.amount
+    }
+    this.transactions.push(newTransaction);
+    console.log(this.transactions)
+  }
 }
