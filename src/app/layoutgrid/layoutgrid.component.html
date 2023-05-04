@@ -1,0 +1,10 @@
+<mat-grid-list cols="2" rowHeight="fit" gutterSize="5px">
+  <mat-grid-tile>
+    <app-account-balance [accountBalance]="accountBalance"></app-account-balance>
+  </mat-grid-tile>
+  <mat-grid-tile rowspan="2">2</mat-grid-tile>
+  <mat-grid-tile rows="1" cols="1">
+    <app-transactiondialog></app-transactiondialog>
+    <!-- <button class="dialog-button" mat-raised-button color="primary" (click)="accountBalance = accountBalance + 10">New Transaction</button> -->
+  </mat-grid-tile>
+</mat-grid-list>

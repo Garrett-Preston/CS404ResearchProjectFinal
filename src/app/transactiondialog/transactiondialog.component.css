@@ -1,0 +1,19 @@
+.example-form {
+  width: 100%;
+}
+.dialog-form {
+  justify-content: left;
+  justify-self: left;
+  width: 100%;
+}
+
+.dialog-button {
+  width: 25%;
+  justify-self: left;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
