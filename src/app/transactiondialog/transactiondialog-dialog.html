@@ -1,19 +1,21 @@
-<h1 mat-dialog-title>New Transaction</h1>
-<div mat-dialog-content>
-  <mat-form-field appearance="fill">
-    <mat-label>Amount</mat-label>
-    <input matInput type="number" [(ngModel)]="data.amount">
-  </mat-form-field>
-  <mat-radio-group [(ngModel)]="data.type" aria-label="Select an option">
-    <mat-radio-button value="deposit">Deposit</mat-radio-button>
-    <mat-radio-button value="withdraw">Withdraw</mat-radio-button>
-  </mat-radio-group>
-  <mat-form-field appearance="fill">
-    <mat-label>Memo</mat-label>
-    <textarea matInput placeholder="Memo/Note" [(ngModel)]="data.memo"></textarea>
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-raised-button (click)="close()">Cancel</button>
-  <button mat-raised-button [mat-dialog-close]="data">Confirm</button>
+<div class="block">
+  <h1 class="block" mat-dialog-title>New Transaction</h1>
+  <div class="block" mat-dialog-content>
+    <mat-form-field class="block" appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="data.amount">
+    </mat-form-field>
+    <mat-radio-group class="block" [(ngModel)]="data.type" aria-label="Select an option">
+      <mat-radio-button value="deposit">Deposit</mat-radio-button>
+      <mat-radio-button value="withdraw">Withdraw</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field class="block" appearance="fill">
+      <mat-label>Memo</mat-label>
+      <textarea matInput placeholder="Memo/Note" [(ngModel)]="data.memo"></textarea>
+    </mat-form-field>
+  </div>
+  <div class="block" mat-dialog-actions>
+    <button mat-raised-button (click)="close()">Cancel</button>
+    <button mat-raised-button [mat-dialog-close]="data">Confirm</button>
+  </div>
 </div>

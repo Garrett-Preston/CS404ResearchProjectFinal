@@ -12,3 +12,13 @@ app-account-balance {
   width: 100%;
   height: 100%
 }
+
+mat-list {
+  width: 100%;
+  height: 100%;
+}
+
+mat-list-item {
+  display: inline-block;
+  height: 150px;
+}

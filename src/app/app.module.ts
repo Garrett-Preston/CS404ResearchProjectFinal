@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms'
 import { AccountBalanceComponent } from './account-balance/account-balance.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutgridComponent } from './layoutgrid/layoutgrid.component';
@@ -15,7 +14,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
-import { TransactiondiaglogDialog, TransactiondialogComponent } from './transactiondialog/transactiondialog.component'
+import { MatListModule } from '@angular/material/list';
+import { TransactiondiaglogDialog, TransactiondialogComponent } from './transactiondialog/transactiondialog.component';
+import { TransactionlistComponent } from './transactionlist/transactionlist.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TransactiondiaglogDialog, TransactiondialogComponent } from './transact
     AccountBalanceComponent,
     LayoutgridComponent,
     TransactiondialogComponent,
-    TransactiondiaglogDialog
+    TransactiondiaglogDialog,
+    TransactionlistComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { TransactiondiaglogDialog, TransactiondialogComponent } from './transact
     MatInputModule,
     FormsModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -27,7 +27,7 @@ export class TransactiondialogComponent {
         amount: 100,
         memo: ""
       },
-      width: '30%',
+      width: '25%',
       height: '75%',
       enterAnimationDuration,
       exitAnimationDuration,
@@ -36,9 +36,13 @@ export class TransactiondialogComponent {
     // This is called once the dialog is closed
     // here we just save the form data and log it
     dialogRef.afterClosed().subscribe(result => {
-      // Call the emitter function to pass data upwards
-      this.newTransaction(result)
       console.log('the dialog was closed: ', result);
+      // Call the emitter function to pass data upwards
+      if (result.type) {
+        this.newTransaction(result)
+      }
+      else
+        window.alert('Please select a transaction type')
     });
   }
 }

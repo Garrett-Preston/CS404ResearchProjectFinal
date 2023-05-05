@@ -1,0 +1,5 @@
+mat-list {
+  border: 3px solid cyan;
+  max-height: 90%;
+  overflow-y: scroll;
+}

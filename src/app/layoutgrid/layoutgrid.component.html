@@ -2,7 +2,9 @@
   <mat-grid-tile>
     <app-account-balance [accountBalance]="accountBalance"></app-account-balance>
   </mat-grid-tile>
-  <mat-grid-tile rowspan="2">2</mat-grid-tile>
+  <mat-grid-tile class="list-tile" rowspan="2">
+    <app-transactionlist [transactions]="transactions"></app-transactionlist>
+  </mat-grid-tile>
   <mat-grid-tile rows="1" cols="1">
     <app-transactiondialog (dataEvent)="addTransaction($event)"></app-transactiondialog>
     <!-- <button class="dialog-button" mat-raised-button color="primary" (click)="accountBalance = accountBalance + 10">New Transaction</button> -->
